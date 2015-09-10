@@ -1,0 +1,16 @@
+import shadow:io@Console;
+
+class test
+{
+	public main( String[] args ) => ()
+	{
+			Console out;
+			
+			int x =
+			4;
+			
+			out.printLine("num: " # x);
+			
+	}
+
+}
