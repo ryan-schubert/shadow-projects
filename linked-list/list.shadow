@@ -1,16 +1,10 @@
 import shadow:io@Console;
 
-class test
+class list
 {
 	public main( String[] args ) => ()
 	{
-			Console out;
-			
-			int x =
-			4;
-			
-			out.printLine("num: " # x);
-			
+		
 	}
 
 }
