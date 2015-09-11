@@ -4,7 +4,13 @@ class mainCode
 {
 	public main( String[] args ) => ()
 	{
-				
+		numList = list.newList();
+		numList.addHead(2);
+		numList.add(0);
+		numList.add(1);
+		numList.add(5);
+		
+		numList.print();
 	}
 
 }

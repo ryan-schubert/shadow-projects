@@ -2,9 +2,75 @@ import shadow:io@Console;
 
 class list
 {
-	public main( String[] args ) => ()
-	{
-		
-	}
-
+    private class Node
+    {
+        int value;
+        Node next;
+    }
+    
+    Node head;
+    int size = 0;
+    
+    public newList() => (list)
+    {
+        head = null;
+        return head;
+    }
+    
+    public isEmpty() => (boolean)
+    {
+        return head != null;
+    }
+    
+    public addHead(int num) => ()
+    {
+        head = Node();
+        head.value = num;
+        size = size + 1;
+    }
+    
+    public add(int num) => ()
+    {
+        if(isEmpty())
+        addHead(num);
+        else
+        {
+            Node temp = Node();
+            Node cur = head;
+            
+            while(cur.next != null)
+            cur = cur.next;
+            
+            cur.next = Node();
+            cur.next.value = num;
+            size = size + 1;
+        }
+    }
+    
+    public clear() => ()
+    {
+        head = null;
+    }
+    
+    public print() => ()
+    {
+        Console out;
+        
+        if(isEmpty())
+        out.printLine("List is empty");
+        else
+        {
+            
+            int i = 1;
+            Node cur = head;
+            
+            while(cur.next != null)
+            {
+                out.printLine("Node # i # ": " # cur.value);
+                i += 1;
+            }
+            
+        }
+        
+    }
 }
